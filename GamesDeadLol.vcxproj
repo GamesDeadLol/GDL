@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug - Quickstart|x64">
+      <Configuration>Debug - Quickstart</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL|x64">
+      <Configuration>Debug DLL</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release - Public|x64">
+      <Configuration>Release - Public</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{79CD1CA2-76B3-4FFC-9825-DC29E861CE25}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectName>GamesDeadLolEngine</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release - Public|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug DLL|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug - Quickstart|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release - Public|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug DLL|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug - Quickstart|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>GamesDeadLol</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug DLL|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>GamesDeadLolEngine</TargetName>
+    <OutDir>$(ProjectDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug - Quickstart|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>GamesDeadLol</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release - Public|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>GamesDeadLol</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;__BUILDNAME__=DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <WarningLevel>Level2</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>./;./PhatSDK;./PhatSDK/Support;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;comctl32.lib;zlib64\zlibstat.lib;mysql64\libmysql64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)GamesDeadLol.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)GamesDeadLol.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <IgnoreSpecificDefaultLibraries>libc.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug DLL|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;__BUILDNAME__=DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <WarningLevel>Level2</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>./;./PhatSDK;./PhatSDK/Support;</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zm150 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;comctl32.lib;zlib64\zlibstat.lib;mysql64\libmysql64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)GamesDeadLolEngine.dll</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)GamesDeadLolEngine.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <IgnoreSpecificDefaultLibraries>libc.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "$(ProjectDir)$(TargetFileName)" </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug - Quickstart|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;QUICKSTART;_WINDOWS;__BUILDNAME__=DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <WarningLevel>Level2</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>./;./PhatSDK;./PhatSDK/Support;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;comctl32.lib;zlib64\zlibstat.lib;mysql64\libmysql64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)GamesDeadLol.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)GamesDeadLol.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <IgnoreSpecificDefaultLibraries>libc.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;__BUILDNAME__=RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>./;./PhatSDK;./PhatSDK/Support;</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;comctl32.lib;zlib64\zlibstat.lib;mysql64\libmysql64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)GamesDeadLol.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>libc.lib</IgnoreSpecificDefaultLibraries>
+      <Profile>true</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release - Public|x64'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>PUBLIC_BUILD;WIN32;NDEBUG;_WINDOWS;__BUILDNAME__=RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>./;./PhatSDK;./PhatSDK/Support;</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;comctl32.lib;zlib64\zlibstat.lib;mysql64\libmysql64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)GamesDeadLol.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>libc.lib</IgnoreSpecificDefaultLibraries>
+      <Profile>true</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AllegianceManager.cpp" />
+    <ClCompile Include="Ammunition.cpp" />
+    <ClCompile Include="Animate.cpp" />
+    <ClCompile Include="AttackManager.cpp" />
+    <ClCompile Include="AttributeTransferDevice.cpp" />
+    <ClCompile Include="Book.cpp" />
+    <ClCompile Include="Caster.cpp" />
+    <ClCompile Include="Chest.cpp" />
+    <ClCompile Include="Clothing.cpp" />
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="Container.cpp" />
+    <ClCompile Include="Corpse.cpp" />
+    <ClCompile Include="Database2.cpp" />
+    <ClCompile Include="DatabaseIO.cpp" />
+    <ClCompile Include="EmoteManager.cpp" />
+    <ClCompile Include="GameEventManager.cpp" />
+    <ClCompile Include="Gem.cpp" />
+    <ClCompile Include="Healer.cpp" />
+    <ClCompile Include="House.cpp" />
+    <ClCompile Include="InferredCellData.cpp" />
+    <ClCompile Include="InferredPortalData.cpp" />
+    <ClCompile Include="FellowshipManager.cpp" />
+    <ClCompile Include="Food.cpp" />
+    <ClCompile Include="GameMode.cpp" />
+    <ClCompile Include="HotSpot.cpp" />
+    <ClCompile Include="Key.cpp" />
+    <ClCompile Include="Lifestone.cpp" />
+    <ClCompile Include="Lockpick.cpp" />
+    <ClCompile Include="Logging.cpp" />
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="ClientCommands.cpp" />
+    <ClCompile Include="ClientEvents.cpp" />
+    <ClCompile Include="ChatMsgs.cpp" />
+    <ClCompile Include="crc.cpp" />
+    <ClCompile Include="crcwheel.cpp" />
+    <ClCompile Include="Database.cpp" />
+    <ClCompile Include="Door.cpp" />
+    <ClCompile Include="FragStack.cpp" />
+    <ClCompile Include="Globals.cpp" />
+    <ClCompile Include="MeleeWeapon.cpp" />
+    <ClCompile Include="Missile.cpp" />
+    <ClCompile Include="MissileLauncher.cpp" />
+    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="MonsterAI.cpp" />
+    <ClCompile Include="Moves.cpp" />
+    <ClCompile Include="Network.cpp" />
+    <ClCompile Include="ObjectIDGen.cpp" />
+    <ClCompile Include="ObjectMsgs.cpp" />
+    <ClCompile Include="PacketController.cpp" />
+    <ClCompile Include="PhatAC.cpp" />
+    <ClCompile Include="PhatSDKImpl.cpp" />
+    <ClCompile Include="PhatSDK\ACCharGenData.cpp" />
+    <ClCompile Include="PhatSDK\ACCharGenResult.cpp" />
+    <ClCompile Include="PhatSDK\AllegianceProfile.cpp" />
+    <ClCompile Include="PhatSDK\Animation.cpp" />
+    <ClCompile Include="PhatSDK\AnimHooks.cpp" />
+    <ClCompile Include="PhatSDK\Appraisal.cpp" />
+    <ClCompile Include="PhatSDK\BSPData.cpp" />
+    <ClCompile Include="PhatSDK\BuildingObj.cpp" />
+    <ClCompile Include="PhatSDK\ChildList.cpp" />
+    <ClCompile Include="PhatSDK\ClothingTable.cpp" />
+    <ClCompile Include="PhatSDK\CombatSystem.cpp" />
+    <ClCompile Include="PhatSDK\Housing.cpp" />
+    <ClCompile Include="PhatSDK\MutationFilter.cpp" />
+    <ClCompile Include="PhatSDK\PlayerModule.cpp" />
+    <ClCompile Include="PhatSDK\QuestDefDB.cpp" />
+    <ClCompile Include="PhatSDK\EnvCell.cpp" />
+    <ClCompile Include="PhatSDK\Environment.cpp" />
+    <ClCompile Include="PhatSDK\ExperienceTable.cpp" />
+    <ClCompile Include="PhatSDK\Frame.cpp" />
+    <ClCompile Include="PhatSDK\GameSky.cpp" />
+    <ClCompile Include="PhatSDK\GameTime.cpp" />
+    <ClCompile Include="PhatSDK\GfxObj.cpp" />
+    <ClCompile Include="PhatSDK\LandBlock.cpp" />
+    <ClCompile Include="PhatSDK\LandBlockInfo.cpp" />
+    <ClCompile Include="PhatSDK\LandBlockStruct.cpp" />
+    <ClCompile Include="PhatSDK\LandCell.cpp" />
+    <ClCompile Include="PhatSDK\LandDefs.cpp" />
+    <ClCompile Include="PhatSDK\LandScape.cpp" />
+    <ClCompile Include="PhatSDK\LegacyPackObj.cpp" />
+    <ClCompile Include="PhatSDK\LegacyStubs.cpp" />
+    <ClCompile Include="PhatSDK\MagicSystem.cpp" />
+    <ClCompile Include="PhatSDK\Material.cpp" />
+    <ClCompile Include="PhatSDK\MathLib.cpp" />
+    <ClCompile Include="PhatSDK\MotionTable.cpp" />
+    <ClCompile Include="PhatSDK\Movement.cpp" />
+    <ClCompile Include="PhatSDK\MovementManager.cpp" />
+    <ClCompile Include="PhatSDK\ObjCache.cpp" />
+    <ClCompile Include="PhatSDK\ObjCell.cpp" />
+    <ClCompile Include="PhatSDK\ObjDesc.cpp" />
+    <ClCompile Include="PhatSDK\ObjectInventory.cpp" />
+    <ClCompile Include="PhatSDK\ObjectMaint.cpp" />
+    <ClCompile Include="PhatSDK\OldPublicWeenieDesc.cpp" />
+    <ClCompile Include="PhatSDK\Palette.cpp" />
+    <ClCompile Include="PhatSDK\PalSet.cpp" />
+    <ClCompile Include="PhatSDK\PartArray.cpp" />
+    <ClCompile Include="PhatSDK\PartCell.cpp" />
+    <ClCompile Include="PhatSDK\Particles.cpp" />
+    <ClCompile Include="PhatSDK\PhatSDK.cpp" />
+    <ClCompile Include="PhatSDK\Physics.cpp" />
+    <ClCompile Include="PhatSDK\PhysicsObj.cpp" />
+    <ClCompile Include="PhatSDK\PhysicsPart.cpp" />
+    <ClCompile Include="PhatSDK\Polygon.cpp" />
+    <ClCompile Include="PhatSDK\PositionManager.cpp" />
+    <ClCompile Include="PhatSDK\PString.cpp" />
+    <ClCompile Include="PhatSDK\PublicWeenieDesc.cpp" />
+    <ClCompile Include="PhatSDK\Qualities.cpp" />
+    <ClCompile Include="PhatSDK\QualityFilter.cpp" />
+    <ClCompile Include="PhatSDK\QuestTable.cpp" />
+    <ClCompile Include="PhatSDK\RegionDesc.cpp" />
+    <ClCompile Include="PhatSDK\Scene.cpp" />
+    <ClCompile Include="PhatSDK\Scripts.cpp" />
+    <ClCompile Include="PhatSDK\Setup.cpp" />
+    <ClCompile Include="PhatSDK\SkillTable.cpp" />
+    <ClCompile Include="PhatSDK\SkyDesc.cpp" />
+    <ClCompile Include="PhatSDK\SmartBox.cpp" />
+    <ClCompile Include="PhatSDK\SortCell.cpp" />
+    <ClCompile Include="PhatSDK\SoundDesc.cpp" />
+    <ClCompile Include="PhatSDK\SpellComponentTable.cpp" />
+    <ClCompile Include="PhatSDK\SpellTable.cpp" />
+    <ClCompile Include="PhatSDK\Support\BinaryReader.cpp" />
+    <ClCompile Include="PhatSDK\Support\BinaryWriter.cpp" />
+    <ClCompile Include="PhatSDK\Support\ClothingCache.cpp" />
+    <ClCompile Include="PhatSDK\Support\CraftTable.cpp" />
+    <ClCompile Include="PhatSDK\Support\DATDisk.cpp" />
+    <ClCompile Include="PhatSDK\Support\GameEventDefDB.cpp" />
+    <ClCompile Include="PhatSDK\Support\LandBlockExtendedData.cpp" />
+    <ClCompile Include="PhatSDK\Support\PhatDataBin.cpp" />
+    <ClCompile Include="PhatSDK\Support\RegionDescExtendedData.cpp" />
+    <ClCompile Include="PhatSDK\Support\SkillChecks.cpp" />
+    <ClCompile Include="PhatSDK\Support\SpellTableExtendedData.cpp" />
+    <ClCompile Include="PhatSDK\Support\TreasureTable.cpp" />
+    <ClCompile Include="PhatSDK\Support\WeenieDefaults.cpp" />
+    <ClCompile Include="PhatSDK\Support\WeenieSave.cpp" />
+    <ClCompile Include="PhatSDK\Surface.cpp" />
+    <ClCompile Include="PhatSDK\TargetManager.cpp" />
+    <ClCompile Include="PhatSDK\Texture.cpp" />
+    <ClCompile Include="PhatSDK\Transition.cpp" />
+    <ClCompile Include="PhatSDK\VendorProfile.cpp" />
+    <ClCompile Include="PhatSDK\Vertex.cpp" />
+    <ClCompile Include="PhatSDK\VitaeSystem.cpp" />
+    <ClCompile Include="PhatSDK\WClassID.cpp" />
+    <ClCompile Include="PhysicsObjCustom.cpp" />
+    <ClCompile Include="PKModifier.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Portal.cpp" />
+    <ClCompile Include="Precompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - Public|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - Public|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug DLL|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug DLL|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - Quickstart|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug - Quickstart|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PressurePlate.cpp" />
+    <ClCompile Include="Scroll.cpp" />
+    <ClCompile Include="Server.cpp" />
+    <ClCompile Include="ServerAPI.cpp" />
+    <ClCompile Include="ServerCellManager.cpp" />
+    <ClCompile Include="ServerObjectMaint.cpp" />
+    <ClCompile Include="SHA512.cpp" />
+    <ClCompile Include="SkillAlterationDevice.cpp" />
+    <ClCompile Include="SpellcastingManager.cpp" />
+    <ClCompile Include="SpellProjectile.cpp" />
+    <ClCompile Include="StatTracker.cpp" />
+    <ClCompile Include="Switch.cpp" />
+    <ClCompile Include="TownCrier.cpp" />
+    <ClCompile Include="TreasureFactory.cpp" />
+    <ClCompile Include="TurbineCell.cpp" />
+    <ClCompile Include="TurbineData.cpp" />
+    <ClCompile Include="TurbineFile.cpp" />
+    <ClCompile Include="TurbineObject.cpp" />
+    <ClCompile Include="TurbinePortal.cpp" />
+    <ClCompile Include="UseManager.cpp" />
+    <ClCompile Include="Util.cpp" />
+    <ClCompile Include="Vendor.cpp" />
+    <ClCompile Include="WeenieFactory.cpp" />
+    <ClCompile Include="WeenieLandCoverage.cpp" />
+    <ClCompile Include="WeenieObject.cpp" />
+    <ClCompile Include="World.cpp" />
+    <ClCompile Include="WorldLandBlock.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AllegianceManager.h" />
+    <ClInclude Include="Ammunition.h" />
+    <ClInclude Include="Animate.h" />
+    <ClInclude Include="AttackManager.h" />
+    <ClInclude Include="AttributeTransferDevice.h" />
+    <ClInclude Include="Book.h" />
+    <ClInclude Include="Caster.h" />
+    <ClInclude Include="Chest.h" />
+    <ClInclude Include="Clothing.h" />
+    <ClInclude Include="Container.h" />
+    <ClInclude Include="Corpse.h" />
+    <ClInclude Include="DatabaseIO.h" />
+    <ClInclude Include="EmoteManager.h" />
+    <ClInclude Include="GameEventManager.h" />
+    <ClInclude Include="Gem.h" />
+    <ClInclude Include="Healer.h" />
+    <ClInclude Include="House.h" />
+    <ClInclude Include="InferredCellData.h" />
+    <ClInclude Include="InferredPortalData.h" />
+    <ClInclude Include="FellowshipManager.h" />
+    <ClInclude Include="Food.h" />
+    <ClInclude Include="HotSpot.h" />
+    <ClInclude Include="Key.h" />
+    <ClInclude Include="Lockpick.h" />
+    <ClInclude Include="MeleeWeapon.h" />
+    <ClInclude Include="Missile.h" />
+    <ClInclude Include="MissileLauncher.h" />
+    <ClInclude Include="MonsterAI.h" />
+    <ClInclude Include="ObjectIDGen.h" />
+    <ClInclude Include="PhatSDK\ACCharGenData.h" />
+    <ClInclude Include="PhatSDK\ACCharGenResult.h" />
+    <ClInclude Include="PhatSDK\AllegianceProfile.h" />
+    <ClInclude Include="PhatSDK\Animation.h" />
+    <ClInclude Include="PhatSDK\AnimHooks.h" />
+    <ClInclude Include="PhatSDK\Appraisal.h" />
+    <ClInclude Include="PhatSDK\BSPData.h" />
+    <ClInclude Include="PhatSDK\BuildingObj.h" />
+    <ClInclude Include="PhatSDK\ChildList.h" />
+    <ClInclude Include="PhatSDK\ClothingTable.h" />
+    <ClInclude Include="PhatSDK\CombatSystem.h" />
+    <ClInclude Include="PhatSDK\Housing.h" />
+    <ClInclude Include="PhatSDK\MutationFilter.h" />
+    <ClInclude Include="PhatSDK\PlayerModule.h" />
+    <ClInclude Include="PhatSDK\QuestDefDB.h" />
+    <ClInclude Include="PhatSDK\DArray.h" />
+    <ClInclude Include="PhatSDK\DLListBase.h" />
+    <ClInclude Include="PhatSDK\GameEnums.h" />
+    <ClInclude Include="PhatSDK\EnvCell.h" />
+    <ClInclude Include="PhatSDK\Environment.h" />
+    <ClInclude Include="PhatSDK\ExperienceTable.h" />
+    <ClInclude Include="PhatSDK\Frame.h" />
+    <ClInclude Include="PhatSDK\GameSky.h" />
+    <ClInclude Include="PhatSDK\GameTime.h" />
+    <ClInclude Include="PhatSDK\GfxObj.h" />
+    <ClInclude Include="PhatSDK\HashData.h" />
+    <ClInclude Include="PhatSDK\LandBlock.h" />
+    <ClInclude Include="PhatSDK\LandBlockInfo.h" />
+    <ClInclude Include="PhatSDK\LandBlockStruct.h" />
+    <ClInclude Include="PhatSDK\LandCell.h" />
+    <ClInclude Include="PhatSDK\LandDefs.h" />
+    <ClInclude Include="PhatSDK\LandScape.h" />
+    <ClInclude Include="PhatSDK\LegacyPackObj.h" />
+    <ClInclude Include="PhatSDK\LegacyStubs.h" />
+    <ClInclude Include="PhatSDK\MagicSystem.h" />
+    <ClInclude Include="PhatSDK\Material.h" />
+    <ClInclude Include="PhatSDK\MathLib.h" />
+    <ClInclude Include="PhatSDK\MotionTable.h" />
+    <ClInclude Include="PhatSDK\Movement.h" />
+    <ClInclude Include="PhatSDK\MovementManager.h" />
+    <ClInclude Include="PhatSDK\ObjCache.h" />
+    <ClInclude Include="PhatSDK\ObjCell.h" />
+    <ClInclude Include="PhatSDK\ObjDesc.h" />
+    <ClInclude Include="PhatSDK\ObjectInventory.h" />
+    <ClInclude Include="PhatSDK\ObjectMaint.h" />
+    <ClInclude Include="PhatSDK\OldPublicWeenieDesc.h" />
+    <ClInclude Include="PhatSDK\Palette.h" />
+    <ClInclude Include="PhatSDK\PalSet.h" />
+    <ClInclude Include="PhatSDK\PartArray.h" />
+    <ClInclude Include="PhatSDK\PartCell.h" />
+    <ClInclude Include="PhatSDK\Particles.h" />
+    <ClInclude Include="PhatSDK\PhatSDK.h" />
+    <ClInclude Include="PhatSDK\PhatSDKSettings.h" />
+    <ClInclude Include="PhatSDK\Physics.h" />
+    <ClInclude Include="PhatSDK\PhysicsDesc.h" />
+    <ClInclude Include="PhatSDK\PhysicsObj.h" />
+    <ClInclude Include="PhatSDK\PhysicsPart.h" />
+    <ClInclude Include="PhatSDK\Polygon.h" />
+    <ClInclude Include="PhatSDK\PositionManager.h" />
+    <ClInclude Include="PhatSDK\PString.h" />
+    <ClInclude Include="PhatSDK\PublicWeenieDesc.h" />
+    <ClInclude Include="PhatSDK\Qualities.h" />
+    <ClInclude Include="PhatSDK\QualityFilter.h" />
+    <ClInclude Include="PhatSDK\QuestTable.h" />
+    <ClInclude Include="PhatSDK\RegionDesc.h" />
+    <ClInclude Include="PhatSDK\SArray.h" />
+    <ClInclude Include="PhatSDK\Scene.h" />
+    <ClInclude Include="PhatSDK\Scripts.h" />
+    <ClInclude Include="PhatSDK\Setup.h" />
+    <ClInclude Include="PhatSDK\SkillTable.h" />
+    <ClInclude Include="PhatSDK\SkyDesc.h" />
+    <ClInclude Include="PhatSDK\SmartArray.h" />
+    <ClInclude Include="PhatSDK\SmartBox.h" />
+    <ClInclude Include="PhatSDK\SortCell.h" />
+    <ClInclude Include="PhatSDK\SoundDesc.h" />
+    <ClInclude Include="PhatSDK\GameStatEnums.h" />
+    <ClInclude Include="PhatSDK\SpellComponentTable.h" />
+    <ClInclude Include="PhatSDK\SpellEnums.h" />
+    <ClInclude Include="PhatSDK\SpellTable.h" />
+    <ClInclude Include="PhatSDK\Support\BinaryReader.h" />
+    <ClInclude Include="PhatSDK\Support\BinaryWriter.h" />
+    <ClInclude Include="PhatSDK\Support\ClothingCache.h" />
+    <ClInclude Include="PhatSDK\Support\CraftTable.h" />
+    <ClInclude Include="PhatSDK\Support\DATDisk.h" />
+    <ClInclude Include="PhatSDK\Support\GameEventDefDB.h" />
+    <ClInclude Include="PhatSDK\Support\ISAAC.h" />
+    <ClInclude Include="PhatSDK\Support\Json.h" />
+    <ClInclude Include="PhatSDK\Support\LandBlockExtendedData.h" />
+    <ClInclude Include="PhatSDK\Support\Packable.h" />
+    <ClInclude Include="PhatSDK\Support\PackableJson.h" />
+    <ClInclude Include="PhatSDK\Support\PhatDataBin.h" />
+    <ClInclude Include="PhatSDK\Support\RegionDescExtendedData.h" />
+    <ClInclude Include="PhatSDK\Support\SkillChecks.h" />
+    <ClInclude Include="PhatSDK\Support\SpellTableExtendedData.h" />
+    <ClInclude Include="PhatSDK\Support\TreasureTable.h" />
+    <ClInclude Include="PhatSDK\Support\WeenieDefaults.h" />
+    <ClInclude Include="PhatSDK\Support\WeenieSave.h" />
+    <ClInclude Include="PhatSDK\Surface.h" />
+    <ClInclude Include="PhatSDK\TargetManager.h" />
+    <ClInclude Include="PhatSDK\Texture.h" />
+    <ClInclude Include="PhatSDK\Transition.h" />
+    <ClInclude Include="PhatSDK\VendorProfile.h" />
+    <ClInclude Include="PhatSDK\Vertex.h" />
+    <ClInclude Include="PhatSDK\VitaeSystem.h" />
+    <ClInclude Include="PhatSDK\WClassID.h" />
+    <ClInclude Include="PhatSDK\WeenieObjectStub.h" />
+    <ClInclude Include="PKModifier.h" />
+    <ClInclude Include="PressurePlate.h" />
+    <ClInclude Include="Scroll.h" />
+    <ClInclude Include="ServerAPI.h" />
+    <ClInclude Include="ServerCellManager.h" />
+    <ClInclude Include="ServerObjectMaint.h" />
+    <ClInclude Include="SkillAlterationDevice.h" />
+    <ClInclude Include="SpellcastingManager.h" />
+    <ClInclude Include="SpellProjectile.h" />
+    <ClInclude Include="AnimationPackage.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="PacketCaptureCredits.h" />
+    <ClInclude Include="PhysicsObjCustom.h" />
+    <ClInclude Include="Database2.h" />
+    <ClInclude Include="GameMode.h" />
+    <ClInclude Include="Lifestone.h" />
+    <ClInclude Include="Logging.h" />
+    <ClInclude Include="NetworkDefs.h" />
+    <ClInclude Include="PhysicsDesc.h" />
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="ClientCommands.h" />
+    <ClInclude Include="ClientEvents.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="ChatMsgs.h" />
+    <ClInclude Include="crc.h" />
+    <ClInclude Include="crcwheel.h" />
+    <ClInclude Include="Database.h" />
+    <ClInclude Include="Door.h" />
+    <ClInclude Include="FragStack.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="Killable.h" />
+    <ClInclude Include="Monster.h" />
+    <ClInclude Include="Moves.h" />
+    <ClInclude Include="Network.h" />
+    <ClInclude Include="ObjectMsgs.h" />
+    <ClInclude Include="PacketController.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Portal.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Server.h" />
+    <ClInclude Include="SHA512.h" />
+    <ClInclude Include="StatTracker.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="Switch.h" />
+    <ClInclude Include="TownCrier.h" />
+    <ClInclude Include="TreasureFactory.h" />
+    <ClInclude Include="TurbineCell.h" />
+    <ClInclude Include="TurbineData.h" />
+    <ClInclude Include="TurbineFile.h" />
+    <ClInclude Include="TurbineFormats.h" />
+    <ClInclude Include="TurbineObject.h" />
+    <ClInclude Include="TurbinePortal.h" />
+    <ClInclude Include="UseManager.h" />
+    <ClInclude Include="Util.h" />
+    <ClInclude Include="Vendor.h" />
+    <ClInclude Include="WeenieFactory.h" />
+    <ClInclude Include="WeenieLandCoverage.h" />
+    <ClInclude Include="WeenieObject.h" />
+    <ClInclude Include="World.h" />
+    <ClInclude Include="WorldLandBlock.h" />
+    <ClInclude Include="zlib\zconf.h" />
+    <ClInclude Include="zlib\zlib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="client.ico" />
+    <Image Include="logo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PhatAC.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
