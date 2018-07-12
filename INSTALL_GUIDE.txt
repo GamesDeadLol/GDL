@@ -1,0 +1,43 @@
+GamesDeadLol Setup Guide
+
+Pre-requisites:
+* The hardware requirements depend upon the number of players. Large memory use is intentional and should be expected: a minimum of 32GB of RAM is recommended for long-term use with many players. It is recommended that any server intending to host many players have a very fast internet connection (fiber), multi-core machine with good single-threaded performance, installed on a fast drive (SSD.)
+
+-------------------
+Intermediate Setup:
+-------------------
+1. Extract all the files from the ZIP to a simple folder such as (e.g. "C:\GamesDeadLol")
+2. Copy FULL/COMPLETE client_portal.dat and client_cell_1.dat files to the "Data" folder. Make sure they are FULL files from January 31, 2017.
+3. Copy your FULL/COMPLETE game files (all of them) to the "Client" folder. Make sure they are FULL files from January 31, 2017.
+4. GDL requires MySQL or MariaDB for database purposes. The easiest way to install them is:
+
+First, download/install WAMP 3.0.6 64-bit here (remember where you installed):
+http://wampserver.aviatechno.net/files/install/wampserver3.0.6_x64_apache2.4.23_mysql5.7.14_php5.6.25-7.0.10.exe
+
+Secondly, download/install the WAMP 3.0.9 update here. Change the install folder to make sure it is the same as the first one!
+http://wampserver.aviatechno.net/files/updates/wampserver3_x86_x64_update3.0.9.exe
+
+Lastly, download/install the MariaDB addon for WAMP:
+http://wampserver.aviatechno.net/files/mariadb/wampserver3_x64_addon_mariadb10.1.23.exe
+
+5. Make sure WAMP is running, and go to http://localhost/phpmyadmin/ in your web browser. Login to PHPMYADMIN as root with no password.
+6. On the left side, click "New" and create a database named "phatac".
+7. With the newly created "phatac" database selected, click the "Import" tab on the right side, select the "phatac_base.sql" file located in the "sqldumps" folder and click "Go."
+8. Run the GDL.exe program and click start
+
+-----------------
+Advanced Setup:
+-----------------
+1. Extract all files from the ZIP to a folder such as (e.g. "C:\GamesDeadLol")
+2. Copy FULL/COMPLETE client_portal.dat and client_cell_1.dat files to the "Data" folder.
+3. Install MariaDB (10.1 tested to work well.)
+4. Import the "phatac_base.sql" file located in the "sqldumps" folder.
+5. Open the server.cfg file and alter it how you wish.
+6. Optionally, copy your game files completely to the "Client" folder so the "Launch" button will work in the GDL Server UI.
+7. Run the GDL.exe program and click start
+
+
+
+
+To play, click Launch, or use ThwargLauncher to connect to the server.
+In order for others to connect to your server, you may need to set the "bind_ip" value located in the "server.cfg" file. Open it using a text editor.
